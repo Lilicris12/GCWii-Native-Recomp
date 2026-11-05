@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gcwii-recomp"
+version = "0.1.0"
+description = "Static recompiler that turns GameCube/Wii discs you own into native Windows, Linux and Android programs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+fast = ["cryptography>=41"]
+test = ["pytest>=7"]
+
+[project.scripts]
+gcwii-recomp = "gcwii_recomp.cli:main"
+
+[project.gui-scripts]
+gcwii-recomp-gui = "gcwii_recomp.gui:run_gui"
+
+[tool.setuptools.packages.find]
+include = ["gcwii_recomp*"]
+
+[tool.setuptools.package-data]
+gcwii_recomp = ["templates/**/*"]

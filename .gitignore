@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+build-*/
+dist/
+.pytest_cache/
+# never commit game data or keys
+*.iso
+*.gcm
+*.wbfs
+*.rvz
+*.ciso
+*.dol
+keys.bin
+*-native/
+*-recomp/
